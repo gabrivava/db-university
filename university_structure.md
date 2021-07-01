@@ -6,46 +6,47 @@
 - per ogni appello d'esame a cui lo studente ha partecipato, è necessario memorizzare il voto ottenuto, anche se non sufficiente --> 
 
 # università
-- id
-- nome
-- città
+- id                 PRIMARY KEY AUTOINCREMENT UNIQUE INDEX TINYINT   NOTNULL 
+- nome               VARCHAR(20)    INDEX   NOTNULL       
+- città              VARCHART(30)   NOTNULL
 - ? dipartimenti
 
 ## dipartimento
-- id
-- nome
-- telefono
+- id                 PRIMARY KEY AUTOINCREMENT UNIQUE SMALLINT  INDEX  NOTNULL
+- nome               VARCHAR(40)  NOTNULL INDEX
+- telefono           INT NOTNULL
 - ? corsi di laurea
 
 ## corsi di laurea
-- id
-- nome
+- id                 PRIMARY KEY AUTOINCREMENT UNIQUE SMALLINT  INDEX  NOTNULL
+- nome               VARCHAR(30) NOTNULL INDEX
+- dipartimento_id    SMALLINT INDEX NOTNULL
 - ? corsi
 
 ## corso
-- id
-- materia
-- durata
-- numero appelli
+- id                PRIMARY KEY SMALLINT INDEX AUTOINCREMENT
+- materia           VARCHAR(30) NOTNULL 
+- durata            VARCHAR(50) NULL
+- numero appelli    TINYINT NOTNULL
 - ? professori
 - ? appelli d'esame
 
 ## professore
-- id
-- nome
-- cognome
-- materia
+- id              PRIMARY KEY TINYINT NOTNULL AUTOINCREMENT INDEX
+- nome            VARCHAR(30) NOTNULL      
+- cognome         VARCHAR(30) NOTNULL INDEX
+- materia         VARCHAR(20) NOTNULL
 
 ## studente
-- id
-- nome
-- cognome
-- email
+- id             PRIMARY KEY TINYINT NOTNULL AUTOINCREMENT INDEX
+- nome           VARCHAR(30) NOTNULL      
+- cognome        VARCHAR(30) NOTNULL INDEX
+- email          VARCHAR(40) NOTNULL 
 - ? voti
 
 ## appello d'esame
-- id 
-- data
-- materia
-- tipo
-- voto
+- id             PRIMARY KEY SMALLINT NOTNULL AUTOINCREMENT INDEX
+- data           DATETIME NOTNULL
+- materia        VARCHAR(20) NOTNULL INDEX
+- tipo           VARCHAR(10) NULL 
+- voto           TINYINT NOTNULL
