@@ -9,27 +9,21 @@
 - id                 PRIMARY KEY AUTOINCREMENT UNIQUE INDEX TINYINT   NOTNULL 
 - nome               VARCHAR(20)    INDEX   NOTNULL       
 - città              VARCHART(30)   NOTNULL
-- ? dipartimenti
 
 ## dipartimento
 - id                 PRIMARY KEY AUTOINCREMENT UNIQUE SMALLINT  INDEX  NOTNULL
 - nome               VARCHAR(40)  NOTNULL INDEX
 - telefono           INT NOTNULL
-- ? corsi di laurea
 
 ## corsi di laurea
 - id                 PRIMARY KEY AUTOINCREMENT UNIQUE SMALLINT  INDEX  NOTNULL
 - nome               VARCHAR(30) NOTNULL INDEX
-- dipartimento_id    SMALLINT INDEX NOTNULL
-- ? corsi
 
 ## corso
 - id                PRIMARY KEY SMALLINT INDEX AUTOINCREMENT
 - materia           VARCHAR(30) NOTNULL 
 - durata            VARCHAR(50) NULL
-- numero appelli    TINYINT NOTNULL
-- ? professori
-- ? appelli d'esame
+- numero_appelli    TINYINT NOTNULL
 
 ## professore
 - id              PRIMARY KEY TINYINT NOTNULL AUTOINCREMENT INDEX
@@ -42,7 +36,6 @@
 - nome           VARCHAR(30) NOTNULL      
 - cognome        VARCHAR(30) NOTNULL INDEX
 - email          VARCHAR(40) NOTNULL 
-- ? voti
 
 ## appello d'esame
 - id             PRIMARY KEY SMALLINT NOTNULL AUTOINCREMENT INDEX
