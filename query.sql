@@ -5,7 +5,7 @@ SELECT * FROM `students` WHERE year(`date_of_birth`) = '1990';
 SELECT * FROM `courses` WHERE `cfu`> 10;
 
 /* selezionare tutti gli studenti che hanno più di 30 anni */  
-SELECT * FROM `students` DATEDIFF(year, `date_of_birth`); 
+SELECT * FROM `students` WHERE 2021 - year(`date_of_birth`) > 30;
 
 /* selezionare tutti i corsi del primo trimestre del primo anno di un qualsiasi corso di laurea (286) */
 SELECT * FROM `courses` WHERE `period` = 'I semestre' AND `year` = 1;
