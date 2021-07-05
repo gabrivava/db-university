@@ -43,3 +43,7 @@
 - materia        VARCHAR(20) NOTNULL INDEX
 - tipo           VARCHAR(10) NULL 
 - voto           TINYINT NOTNULL
+
+## voti
+- id             PRIMARY KEY MEDIUMINT NOTNULL AUTOINCREMENT INDEX
+- voto           TINYINT NOTNULL 
